@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
+
+
 /**
  * @author daoshenzzg@163.com
  * @date 2019/1/14 11:11
@@ -32,7 +34,7 @@ public class GzipCompression implements Compression {
             byte[] buf = new byte[unit];
             int len = 0;
             while ((len = inputStream.read(buf)) != -1) {
-                gzip.write(buf, 0, len);
+                gzip.write(buf, 0, len);  //0 refers to open compress  
             }
 
             gzip.finish();
